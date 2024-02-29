@@ -6,6 +6,13 @@ func main(){
 	
 	fmt.Println("Hello World")
 
+	a := 24234324.21432435345345
+	fmt.Printf("%T", a)
+	fmt.Println()
+	fmt.Printf("%.3f", a)
+	fmt.Println()
+	fmt.Printf("%18f", a)
+
 
 /*
 Important points:
