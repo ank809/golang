@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
+	"fmt"
 	"os"
 	"strconv"
 )
 
-func main(){
+func main() {
 
 	// Ways to take input from the user
 	// 1. Using Scan : In this new line  is considered as space.
@@ -17,20 +17,19 @@ func main(){
 	fmt.Scan(&a)
 	fmt.Println("Number you entered is ", a)
 
-	// 2. Using Scanln 
+	// 2. Using Scanln
 	var num int
 	fmt.Printf("Enter second number: ")
 	fmt.Scanln(&num)
 	fmt.Println("Number you entered is ", num)
 
-	// 3. USing bufio
+	// 3. Using bufio
 
 	//  Initializes a new Scanner object from the bufio package to read input from the standard input stream (os.Stdin)
-
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Printf("Enter third number: ")
 	scanner.Scan()
-	c , _ := strconv.ParseInt(scanner.Text(), 10, 10)
+	c, _ := strconv.ParseInt(scanner.Text(), 10, 10)
 	fmt.Println("Number is: ", c)
 
 }
