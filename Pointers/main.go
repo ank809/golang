@@ -27,6 +27,8 @@ func main() {
 
 	fmt.Println(*(max_element(&slice)))
 
+	fmt.Println(*(reverse_slices(&slice)))
+
 }
 
 func changeValue(str1, str2 *string) {
