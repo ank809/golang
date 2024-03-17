@@ -5,9 +5,10 @@ import "fmt"
 func main() {
 
 	fmt.Println("Maps")
-
-	// Maps store data in key-value pairs and they do not care about the order.
-	// Maps are fast as comapred to array because in array we store element in order.
+	/* Maps are unordered collections of key-value pairs.
+	Maps store data in key-value pairs and they do not care about the order.
+	Maps are fast as comapred to array because in array we store element in order.
+	*/
 
 	mp := map[string]int{
 		"apple":  1,
@@ -32,7 +33,7 @@ func main() {
 	delete(mp, "apple")
 	fmt.Println(mp)
 
-	// TO check if a key exist in map or not
+	// To check if a key exist in map or not
 
 	// Here value will store the value at that key and ok will store bool value that the key exists or not
 	value, ok := mp1["tim"]

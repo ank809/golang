@@ -10,6 +10,7 @@ func main() {
 
 	/*
 		Slices are a part of array
+		Slices are references to a contiguous segment of an array.
 		Slices in Go works on top of array
 		In array the length and capacity are same but in Slice it's not
 	*/
