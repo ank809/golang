@@ -24,8 +24,12 @@ type Shape struct {
 }
 
 func main() {
+	var p2 Person
+	// This line will print all the field names and values of the p2
+	fmt.Printf("%+v \n", p2)
 	var p1 Person = Person{"Ankita", 19}
 	fmt.Println(p1.name, p1.age)
+	fmt.Println(p1)
 
 	p1.name = "Astha"
 	fmt.Println(p1.name, p1.age)
@@ -61,5 +65,7 @@ func main() {
 	fmt.Println(student.getAverage())
 
 	fmt.Println(student.differnce_marks(Student{"Astha", []int{60, 40, 100}, 19}))
+
+	UserDetails()
 
 }

@@ -38,4 +38,6 @@ func main() {
 	// Here value will store the value at that key and ok will store bool value that the key exists or not
 	value, ok := mp1["tim"]
 	fmt.Println(value, ok)
+
+	colors()
 }
