@@ -8,6 +8,7 @@ func main() {
 	/* Maps are unordered collections of key-value pairs.
 	Maps store data in key-value pairs and they do not care about the order.
 	Maps are fast as comapred to array because in array we store element in order.
+	Maps are reference type so we can modify them directly when we pass then into another functions.
 	*/
 
 	mp := map[string]int{

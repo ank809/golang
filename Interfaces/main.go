@@ -31,4 +31,18 @@ func main() {
 	fmt.Println(getArea(r))
 	fmt.Println(getArea(c))
 
+	a := EnglishBot{}
+	b := HindiBot{}
+	fmt.Println(printGreeting(a))
+	fmt.Println(printGreeting(b))
+
+	i := Dog{}
+	j := Cat{}
+	fmt.Println(MakeSound(i))
+	fmt.Println(MakeSound(j))
+
+	e := Triangle{2, 3}
+	f := Square{4}
+	fmt.Println(printArea(e))
+	fmt.Println(printArea(f))
 }
