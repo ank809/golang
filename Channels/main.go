@@ -1,6 +1,8 @@
 package main
 
-import "time"
+import (
+	"time"
+)
 
 func main() {
 	links := []string{
@@ -38,10 +40,15 @@ func main() {
 	for l := range c {
 		// go checkLinkRepeating(l, c)
 		// function Literal
-		go func() {
+		// go func() {
+		// 	time.Sleep(5 * time.Second)
+		// 	checkLinkRepeating(l, c)
+		// }()
+		go func(link string) {
 			time.Sleep(5 * time.Second)
-			checkLinkRepeating(l, c)
-		}()
+			checkLinkRepeating(link, c)
+		}(l)
 	}
 
+	selectStatement()
 }
