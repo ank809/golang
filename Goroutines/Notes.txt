@@ -1,0 +1,25 @@
+Q1. What is a Channel?
+Channel provides a way to communicate between concurrently executing functions by sending and 
+recieving value of a specified type.
+Value of an uninitialized channel is nil.
+Uses FIFO , first value that enter in channel will be removed first
+
+
+Channel Type Declaration:
+1. Send-only channels: In these channels you can only send the data.
+ch:= make(chan <- string)
+2. Recieve-only channels: We can only recieve from these channels.
+ch:=make(<-chan string)
+
+
+Types of Channels
+1. Buffered Channel: They have a capacity and and allows specified no. of elements to be queued before blocking.
+ch:=make(chan int, 3)
+2. Non-Buffered Channel: They do not have any capacity & blocks until both sender and reciever are ready .
+ch:=make(chan int)
+
+
+Close Channel
+
+1. We can't send value to a closed channel
+2. We can recieve from a closed channel
