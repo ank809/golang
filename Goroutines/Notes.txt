@@ -23,3 +23,24 @@ Close Channel
 
 1. We can't send value to a closed channel
 2. We can recieve from a closed channel
+
+Race Conditions: Race condition occurs when multiple goroutines tries to access same data variable .
+For e.g : one is reading the value and other is writing so sometimes the expected value will be different
+from the value we got.
+
+To check race condition is there or not use commmand:
+go run -race main.go
+
+How to remove Race Conditions ?
+1. Mutex
+
+var mutex= sync.Mutex{}
+
+How does Mutex works?
+Mutex is created in an unlocked state.
+When the first call to mutex.Lock() is made, mutex state changes to Locked.
+Any other calls to mutex.Lock() will block the goroutine until mutex.Unlock() is called
+So, only one thread can access the critical section.
+
+RWMutex: This allows multiple readers to read the value but  if the writer tries to access 
+the value then all readers will be blocked

@@ -1,0 +1,57 @@
+Websockets make an persistent connection 
+It is Stateful, bi-directional and full duplex which means client and server can send data at any time.
+Used in realtime applications
+
+HTTP: unidirectional,half duplex and  stateless protocol
+IN HTTP we have a method called POLLING
+1. Short polling: in this we sent the request to the server after a specified time i.e 1sec, 2 sec but if server sent you no message then it  will return you an empty message and it will acquire some resources so that'll create a nuisance.
+2. Long polling: in this same thing occurs but it takes a longer time .
+
+Server Sent Events(SSE): In this server can sent data to client at any time when it wants. But the issue here is that it is unidirectional as only server can send the data client cannot. It is not efficient in chatting applications and trading apps but can be used where only server needs to send the data frequently. 
+ChatGpt uses SSE .
+
+Websocket:
+In websocket the client first sents the server a HTTP HANDSHAKE REQUEST WITH UPGRADE HEADER which means that if the server agrees then they will upgrade it to websocket connection as first it is a HTTP REQUEST ONLY.
+
+If the server agrees it sent a status code 101 i.e SWITCHING PROTOCOL RESPONSE.
+
+Remote Procedure Calls (RPC)
+
+Different Systems connected over a network
+
+Protocol that a program uses to request a service located on different computer without having the need to understand the network's details.
+
+COMMUNICATION MODELS
+1. Shared memory 
+2. Message passing
+
+NOTE: Shared memory is not possible in RPC so we have to choose the other one.
+
+In RPC we use MESSAGE based communication scheme
+In RPC each message is passed to a RPC Daemon( function which is always listening) listening to a port on remote system and it contains function identifier and the values to be passed . The function is then executed and returned back.
+
+We have a stub i.e Client Stub for each remote function/procedure. It hides the details that are used for communication.When a client invoke a remote procedure RPC calls the appropriate stub and pass the parameters to remote procedure. This stub locates the stub on the port and marshal the parameters.
+Marshaling means packaging the params in a way that they can be transmitted over a network.
+
+
+
+TYPES OF COMMUNICATION
+1. Synchronous (strong coupling): when we are communicating with other service directly
+a) HTTP
+b) Websocket
+
+2. Asynchronous (weak coupling): when we don't wait for another the other service to send us a response we just put that in a queue
+Sender sends the request and start doing its own work without waiting for response.
+a) Message queue
+b) Pub Subs: (Publisher Subscriber)
+c) Server Sent Events
+d) Websocket( debatable if sync or async)
+
+Strong Coupling :  Components need to be available and responsive at the same time.
+
+Use Cases of Websocket
+1. Chat Application
+2. Real-time Gaming
+3. Trading 
+4. Social Media Lives
+5. Replit : two people typing at same time 
